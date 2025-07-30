@@ -32,30 +32,6 @@ Live Demo:- https://sydfahim.github.io/SetGo-Goal-Setting-App/
 
 ---
 
-## ⚙️ Getting Started
-
-1. **Clone the repo**
-   ```bash
-   git clone https://github.com/yourusername/setgo.git
-   cd setgo
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start the app**
-   ```bash
-   npm run dev
-   ```
-
-4. **(Optional)** Configure Firebase if using it for storage
-
-> ✨ **Note**: This version has **no login or signup** — just jump right in and start setting goals.
-
----
-
 ## 📁 Folder Structure (Simplified)
 
 ```
