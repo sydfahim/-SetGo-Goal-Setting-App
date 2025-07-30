@@ -107,7 +107,7 @@ SetGo is built to feel *fun*, not forceful — like a little voice cheering you 
 
 ---
 
-## 🧠 Made by [Your Name]
+## 🧠 Made by Sayed Fahim
 
 Designed with love, built for growth.  
 Let’s **Set**, let’s **Go**. 🚀
