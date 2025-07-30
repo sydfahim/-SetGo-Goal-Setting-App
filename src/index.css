@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SetGo Design System - Vibrant goal-setting app */
+@layer base {
+  :root {
+    /* Core Colors */
+    --background: 250 100% 99%;
+    --foreground: 240 10% 9%;
+    
+    /* Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 9%;
+    
+    /* Brand Colors - Vibrant Purple to Pink */
+    --primary: 270 91% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 280 100% 70%;
+    
+    /* Secondary - Fresh Teal */
+    --secondary: 174 62% 47%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-glow: 174 100% 60%;
+    
+    /* Accent - Warm Orange */
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 25 100% 60%;
+    
+    /* Success - Vibrant Green */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-glow: 142 100% 50%;
+    
+    /* Warning & Destructive */
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Neutral Colors */
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 270 91% 65%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--secondary-glow)) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)) 0%, hsl(var(--success-glow)) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--warning)) 100%);
+    --gradient-bg: linear-gradient(135deg, hsl(250 100% 99%) 0%, hsl(280 100% 98%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 20px -4px hsl(var(--primary) / 0.1);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.3);
+    --shadow-success: 0 0 30px hsl(var(--success-glow) / 0.3);
+    
+    /* Radius */
+    --radius: 1rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    /* Core Colors - Dark Theme */
+    --background: 240 10% 6%;
+    --foreground: 250 100% 95%;
+    
+    /* Surface Colors */
+    --card: 240 10% 8%;
+    --card-foreground: 250 100% 95%;
+    --popover: 240 10% 8%;
+    --popover-foreground: 250 100% 95%;
+    
+    /* Brand Colors maintain vibrancy in dark mode */
+    --primary: 270 91% 70%;
+    --primary-glow: 280 100% 75%;
+    
+    --secondary: 174 62% 52%;
+    --secondary-glow: 174 100% 65%;
+    
+    --accent: 25 95% 58%;
+    --accent-glow: 25 100% 65%;
+    
+    --success: 142 76% 41%;
+    --success-glow: 142 100% 55%;
+    
+    /* Neutral adjustments */
+    --muted: 240 10% 12%;
+    --muted-foreground: 240 5% 60%;
+    --border: 240 10% 15%;
+    --input: 240 10% 15%;
+    --ring: 270 91% 70%;
+    
+    /* Dark gradients */
+    --gradient-bg: linear-gradient(135deg, hsl(240 10% 6%) 0%, hsl(240 15% 8%) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-bg);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Button Variants */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:opacity-90 rounded-[var(--radius)] px-6 py-3 font-medium transition-all duration-300 shadow-lg hover:shadow-[var(--shadow-glow)];
+    background: var(--gradient-primary);
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:opacity-90 rounded-[var(--radius)] px-6 py-3 font-medium transition-all duration-300;
+    background: var(--gradient-secondary);
+  }
+  
+  .btn-success {
+    @apply bg-success text-success-foreground hover:opacity-90 rounded-[var(--radius)] px-6 py-3 font-medium transition-all duration-300;
+    background: var(--gradient-success);
+  }
+  
+  /* Card Variants */
+  .card-glow {
+    @apply bg-card text-card-foreground rounded-[var(--radius-lg)] p-6 shadow-[var(--shadow-soft)] border border-border/50;
+    backdrop-filter: blur(20px);
+  }
+  
+  /* Confetti Animation */
+  .confetti {
+    @apply animate-bounce;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  /* Progress Bar */
+  .progress-glow {
+    box-shadow: 0 0 20px hsl(var(--primary-glow) / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
