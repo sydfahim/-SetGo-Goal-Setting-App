@@ -103,7 +103,8 @@ SetGo is built to feel *fun*, not forceful — like a little voice cheering you 
 
 ## 📷 Sneak Peek
 
-> (Add screenshots or a demo video link here)
+> <img width="1425" height="785" alt="Screenshot 2025-07-30 at 1 33 57 AM" src="https://github.com/user-attachments/assets/0d73d3ca-9a4c-4e24-aac7-a15405b40a46" />
+
 
 ---
 
