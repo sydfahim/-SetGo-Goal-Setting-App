@@ -19,6 +19,7 @@
 
         const motivationalQuotes = [
             "You're closer than you think! 🌟",
+            "Dream it. Plan it. Do it! ⚡",
             "Every step forward is progress! 💪",
             "Believe in yourself - you've got this! 🚀",
             "Success is a journey, not a destination! ✨",
